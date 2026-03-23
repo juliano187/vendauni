@@ -163,21 +163,35 @@
         }
 
         /* Responsividade Mobile */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 1.8rem; }
-            .container { grid-template-columns: 1fr 1fr; gap: 15px; }
-            .card-image { height: 250px; }
+        
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem 5%; /* Aumentamos o respiro vertical de 1rem para 1.5rem */
+        flex-direction: column; /* Empilha a logo e o texto do WhatsApp */
+        gap: 10px; /* Cria um espaço entre a logo e o texto */
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 1.3rem; /* Diminui um pouco a logo para não ocupar a tela toda */
+    }
+
+    .hero {
+        padding: 40px 5% 30px; /* Ajuste no hero para não encostar no header novo */
+    }
+
+    .container { 
+        grid-template-columns: 1fr 1fr; 
+        gap: 15px; 
+        padding-top: 20px; /* Garante que os cards não colem no topo */
+    }
+}
             
-        }
+        
 
         @media (max-width: 320px) {
             .container { grid-template-columns: 1fr; }
-            header {
-                 display: flex;
-            justify-content: center;
-            align-items: center;
-                padding: 10px;
-            }
+            
         }
     </style>
 </head>
